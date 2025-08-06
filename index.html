@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>RevoU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<body>
-    <div class="container mx-auto mt-10">
-        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
-            <thead>
-                <tr>
-                    <th class="py-2 px-4 border-b bg-gray-100 text-left">Name</th>
-                    <th class="py-2 px-4 border-b bg-gray-100 text-left">Email</th>
-                    <th class="py-2 px-4 border-b bg-gray-100 text-left">Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="py-2 px-4 border-b">Alice</td>
-                    <td class="py-2 px-4 border-b">alice@example.com</td>
-                    <td class="py-2 px-4 border-b">Admin</td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4 border-b">Bob</td>
-                    <td class="py-2 px-4 border-b">bob@example.com</td>
-                    <td class="py-2 px-4 border-b">User</td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="todo-container">
+    <h1>Todo List</h1>
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="Add a todo...">
+      <input type="date" id="date-input" placeholder="dd/mm/yyyy">
+      <button id="add-task-btn">+</button>
     </div>
-</body>
+    <div class="action-buttons">
+      <button id="filter-btn">FILTER</button>
+      <button id="delete-all-btn">DELETE ALL</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>TASK</th>
+          <th>DUE DATE</th>
+          <th>STATUS</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="task-list">
+        <tr><td colspan="4">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
